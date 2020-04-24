@@ -1,7 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-   
+
 def check_index_vector(variable_name, k, lenk, startv, endv):
     if len(k) != lenk:
         print('Incorrect length for ' + variable_name + '.')
@@ -34,17 +34,20 @@ def exercise1(Omega0, k, xsin, Omega0b, kb, xsinb):
    check_index_vector('kb', kb, 0, 59)
    check_signal_vector('xsinb', xsinb, 60)
 
-def exercise2(k, x):
-   check_index_vector('k', k, 16, -5, 10)
-   check_signal_vector('x', x, 16)
+def exercise2(kk08, kk64, x1_08, x1_64, x2_08, x2_64, x3_08, x3_64):
+   check_index_vector('kk08', kk08, 8, 0, 7)
+   check_index_vector('kk64', kk64, 64, 0, 63)
+   check_signal_vector('x1_08', x1_08, 8)
+   check_signal_vector('x1_64', x1_64, 64)
+   check_signal_vector('x2_08', x2_08, 8)
+   check_signal_vector('x2_64', x2_64, 64)
+   check_signal_vector('x3_08', x3_08, 8)
+   check_signal_vector('x3_64', x3_64, 64)
 
-def exercise3(k, x, kc4, xc4, kc8, xc8):
-    check_index_vector('k', k, 16, 0, 15)
-    check_signal_vector('x', x, 16)
-    check_index_vector('kc4', kc4, 16, 4, 19)
-    check_signal_vector('xc4', xc4, 16)
-    check_index_vector('kc8', kc8, 16, 8, 23)
-    check_signal_vector('xc8', xc8, 16)
+def exercise3(kk, x1, x2):
+    check_index_vector('kk', kk, 16, 0, 63)
+    check_signal_vector('x1', x1, 64)
+    check_signal_vector('x2', x2, 64)
 
 def exercise4(k, x, x0):
     check_index_vector('k', k, 64, 0, 63)
